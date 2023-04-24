@@ -7,31 +7,39 @@ Home
 <style>
   body {
     font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
     background-color: #f4f4f4;
     
   }
 
-  .container{ 
-    border-color: #02b3b3;
-    color: #f4f4f4;
+  .container { 
+    height: 200px;
+    padding: 5px 570px;
+    position: relative;
+  }
+
+  .input-group {
+    padding: 10rem;
+    color: #fff;
     position: absolute;
-    top: 30%;
-    left: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
   }
-
-  .container h2{
-    font-size: 2.5rem;
+  
+  .input-group h2 {
+    color: #02b3b3;
+    font-size: 1.8rem;
   }
-
-  .container input{
+  
+  .input-group .btn {
     background-color: #02b3b3;
     border-color: #02b3b3;
     color: #2c3a47;
-    font-size: 2rem;
-
+    font-size: 1.8rem;
   }
-
 </style>
 {% endblock style  %}
 {% block body %}
@@ -42,15 +50,13 @@ Home
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="/static/2.jpg" class="d-block w-100" alt="...">
-          
+          <div class="input-group">
+            <span class="input-group-text"><h2>Search Keywords</h2></span>
+            <textarea class="form-control" aria-label="Search keywords"></textarea>
             <div class="container">
-              <h1><input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Upload CV"></input></h1>
-              <h2><input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Search CV"></input></h2>                   
+              <button class="btn px-6" type="button" id="inputGroupFileAddon04">Search</button>
             </div>
-            {% comment %} <div class="container">
-              <input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Search CV"></input>
-            </div>     {% endcomment %}
-
+            
           </div>
         </div>
       </div>

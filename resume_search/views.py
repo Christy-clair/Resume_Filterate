@@ -10,6 +10,9 @@ def index(request):
     #return HttpResponse("This is Home Page")
     return render(request,'index.html',context)
 
+def upload_cv(request):
+    return render(request, "index1.html")
+
 def about(request):
     return HttpResponse("This is Information Page")
 
