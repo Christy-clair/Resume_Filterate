@@ -16,7 +16,7 @@ Home
     color: #f4f4f4;
     position: absolute;
     top: 30%;
-    left: 35%;
+    left: 43%;
     -ms-transform: translate(-50%, -50%);
   }
 
@@ -32,6 +32,39 @@ Home
 
   }
 
+  .container1{ 
+    border-color: #02b3b3;
+    color: #02b3b3;
+    position: absolute;
+    top: 48%;
+    left: 23%;
+    font-size: 2rem;
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .form {
+    display: block;
+    width: 100%;
+    padding: 5rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    }
+
+  .label{
+    background-color: #02b3b3;
+    display: block;
+    padding: 5rem;
+    font-size: 2rem;
+    background-color: #fff;
+  }
+  
+  .btn{
+    background-color: #02b3b3;
+    color: #2c3a47;
+    margin: 1rem 0;
+    padding: 0.4rem 1rem;
+  }
+
 </style>
 {% endblock style  %}
 {% block body %}
@@ -45,7 +78,14 @@ Home
           
             <div class="container">
               <h1><input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Upload CV"></input></h1>
-              <h2><input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Search CV"></input></h2>                   
+              {% comment %} <h2><input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Search CV"></input></h2>    {% endcomment %}                              
+            </div>
+            <div class="container1">
+            <form action="#" class="contact">
+              <label for="name">Search Keywords</label>
+              <input type="text" id="name" placeholder= "Enter your requirements">
+              <button type="submit" class="btn">Submit</button>
+            </form>
             </div>
             {% comment %} <div class="container">
               <input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Search CV"></input>
