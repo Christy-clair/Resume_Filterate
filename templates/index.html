@@ -74,8 +74,12 @@ Home
           <img src="/static/2.jpg" class="d-block w-100" alt="...">
           
             <div class="container">
-              <h1><input type="submit" name="mybtn2" onclick="location.href='{% url 'upload_cv' %}'" value="Upload CV"></input></h1>
+              <div>
+                <input type="file" accept=".doc,.pdf,.docx" multiple  value="Choose File"></input>
+                <button type="submit" class="btn">Upload</button>
+              </div>
             </div>
+
             <div class="container1">
             <form action="#">
               <label class="search" for="name">Search Keywords</label>
