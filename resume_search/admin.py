@@ -3,3 +3,6 @@ from .models import Resume
 # Register your models here.
 
 admin.site.register(Resume)
+
+class ResumeAdmin(admin.ModelAdmin):
+    pass

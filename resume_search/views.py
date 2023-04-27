@@ -1,6 +1,12 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from django.core.files.storage import FileSystemStorage
-
+from resume_parser import resumeparse
+from pyresparser import ResumeParser
+from django.conf import settings
+from django.contrib import messages
+import os
+from django.db import IntegrityError
+from .models import Resume
 
 # Create your views here.
 def index(request):
@@ -14,8 +20,3 @@ def index(request):
 def upload_cv(request):
     return render(request, "Choose_File.html")
 
-def about(request):
-    return HttpResponse("This is Information Page")
-
-def services(request):
-    return HttpResponse("This is Services Page")
