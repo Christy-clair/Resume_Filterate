@@ -26,21 +26,32 @@
            
             <!-- Search Keyword Tab on Interface 1-->
             <div class="container1">
-            <form action="#">
-              <label class="search" for="name">Search Keywords</label>
-              <input class="requirements" type="text" id="name" placeholder= "Enter your requirements">
-              <button type="submit" class="btn">Submit</button>
-            </form>
+              <form action="#">
+                <label class="search" for="name">Search Keywords</label>
+                <input class="requirements" type="text" id="name" placeholder= "Enter your requirements">
+                <button type="submit" class="btn">Submit</button>
+              </form>
             </div>
              
+            {% if link %}
+            <p>Uploaded File:<a href="{{link}}" target="_blank">{{name}}</a></p>
+            {% endif %}
+
+
+            {% for resume in resumeListDetails %}
+            <div class="row">
+              <p>File:<a href="{{resume.fileURL}}" target="_blank">{{resume.fileName}}</a></p>
+            </div>
+            {% endfor %}
+
 
             <!--  Table to Display the content -->
             <div> 
               <table>
                 <tr>
-                <th>Uploaded Date</th>
-                <th>Experience</th>
                 <th>View Resume</th>
+                     
+                  
                 </tr>    
                 </table>
             </div>

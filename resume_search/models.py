@@ -23,7 +23,11 @@ from resume_filterate import utils
 #import spacy
 #spacy.load('en_core_web_sm')
 # Create your models here.
+
+#Updated by Akanksha 
 class Resume(models.Model):
     pass
+    #file=models.FileField('Documents',upload_to='C:\Users\HP\Desktop\Ideate\Resume_Filterate-1\media')
+  
 
 

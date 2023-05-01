@@ -25,5 +25,5 @@ admin.site.index_title = "Welcome to CV Search Engine"
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('resume_search.urls')),
-    path('upload_cv',views.upload_cv,name='upload_cv')
+    path('index2.html',views.scanned_results,name='scanned_results')
 ]
